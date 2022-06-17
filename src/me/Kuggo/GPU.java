@@ -1,9 +1,6 @@
 package me.Kuggo;
 
-import me.Kuggo.hitboxes.CustomHitbox;
-import me.Kuggo.hitboxes.Hitbox;
-
-import java.util.Iterator;
+import me.Kuggo.utils.*;
 
 public class GPU {
 
@@ -17,6 +14,10 @@ public class GPU {
 
     private final Matrix screen;
 
+    private Coords screenOffset;
+
+    private final float zoom_factor;
+
     private final Matrix buffer;
 
     public GPU(int screenWidth, int screenHeight, int width, int height) {
@@ -24,8 +25,18 @@ public class GPU {
         this.height = height;
         this.screenWidth = width;
         this.screenHeight = height;
+        zoom_factor = 1;
+        screenOffset = new CoordsClass(0, 0);
         this.screen = new Matrix(width, height);
         this.buffer = new Matrix(screenWidth, screenHeight);
+    }
+
+    public Matrix getScreen() {
+        return screen;
+    }
+
+    public void advanceTick() {
+        // todo
     }
 
     public int getScreenWidth() {
@@ -45,6 +56,11 @@ public class GPU {
             Pixel pixel = buffer.get(coords);
             pixel.setColor(color);
         } catch (IndexOutOfBoundsException ignored) {}
+    }
+
+
+    public void drawObjects() {
+
     }
 
 }

@@ -1,4 +1,4 @@
-package me.Kuggo;
+package me.Kuggo.utils;
 
 public enum Color {
     TRANSPARENT, WHITE, BLACK, YELLOW, BLUE, RED, GREEN, PURPLE, CYAN;

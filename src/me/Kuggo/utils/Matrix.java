@@ -1,4 +1,4 @@
-package me.Kuggo;
+package me.Kuggo.utils;
 
 public class Matrix {
 
@@ -15,7 +15,7 @@ public class Matrix {
 
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
-                matrix[i][j] = new Pixel(new Coords(j, i));
+                matrix[i][j] = new Pixel(new CoordsClass(j, i));
             }
         }
     }
@@ -27,7 +27,7 @@ public class Matrix {
 
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
-                matrix[i][j] = new Pixel(new Coords(j, i), color);
+                matrix[i][j] = new Pixel(new CoordsClass(j, i), color);
             }
         }
     }

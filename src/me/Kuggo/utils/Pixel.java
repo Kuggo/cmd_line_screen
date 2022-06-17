@@ -1,21 +1,21 @@
-package me.Kuggo;
+package me.Kuggo.utils;
 
 public class Pixel implements Comparable<Pixel> {
 
     private Color color;
-    private final Coords coords;
+    private final CoordsClass coords;
 
-    public Pixel(Coords pos) {
+    public Pixel(CoordsClass pos) {
         this.coords = pos;
         color = Color.TRANSPARENT;
     }
 
-    public Pixel(Coords pos, Color color){
+    public Pixel(CoordsClass pos, Color color){
         this.coords = pos;
         this.color = color;
     }
 
-    public Pixel(Coords pos, Pixel pixel) {
+    public Pixel(CoordsClass pos, Pixel pixel) {
         this.coords = pos;
         color = pixel.color;
     }
@@ -28,7 +28,7 @@ public class Pixel implements Comparable<Pixel> {
         return color;
     }
 
-    public Coords getCoords() {
+    public CoordsClass getCoords() {
         return coords;
     }
 
